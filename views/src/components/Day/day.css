@@ -1,0 +1,10 @@
+.day {
+    width: 50vw;
+    height: 75%;
+    border-left: 3px dotted whitesmoke;
+    border-right: 3px dotted whitesmoke;
+    left: 50%;
+    margin: auto;
+
+}
+

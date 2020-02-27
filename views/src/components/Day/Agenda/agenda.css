@@ -1,0 +1,7 @@
+.agenda {
+    height: 95%;
+    width: 80%;
+    left: 50%;
+    margin: auto;
+    overflow-y: auto;
+}

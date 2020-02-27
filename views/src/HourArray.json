@@ -1,0 +1,98 @@
+[
+    {"id":0,
+    "hourName":"midnight",
+    "tasks":[]
+},
+{"id":1,
+    "hourName":"1am",
+    "tasks":[]
+}, 
+{"id":2,
+    "hourName":"2am",
+    "tasks":[]
+}, 
+{"id":3,
+    "hourName":"3am",
+    "tasks":[]
+}, 
+{"id":4,
+    "hourName":"4am",
+    "tasks":[]
+},
+{"id":5,
+    "hourName":"5am",
+    "tasks":[]
+}, 
+{"id":6,
+    "hourName":"6am",
+    "tasks":[]
+}, 
+{"id":7,
+    "hourName":"7am",
+    "tasks":[]
+}, 
+{"id":8,
+    "hourName":"8am",
+    "tasks":[]
+}, 
+{"id":9,
+    "hourName":"9am",
+    "tasks":[]
+}, 
+{"id":10,
+    "hourName":"10am",
+    "tasks":[]
+}, 
+{"id":11,
+    "hourName":"11am",
+    "tasks":[]
+}, 
+{"id":12,
+    "hourName":"noon",
+    "tasks":[]
+}, 
+{"id":13,
+    "hourName":"1pm",
+    "tasks":[]
+}, 
+{"id":14,
+    "hourName":"2pm",
+    "tasks":[]
+}, 
+{"id":15,
+    "hourName":"3pm",
+    "tasks":[]
+}, 
+{"id":16,
+    "hourName":"4pm",
+    "tasks":[]
+}, 
+{"id":17,
+    "hourName":"5pm",
+    "tasks":[]
+}, 
+{"id":18,
+    "hourName":"6pm",
+    "tasks":[]
+},
+{"id":19,
+    "hourName":"7pm",
+    "tasks":[]
+}, 
+{"id":20,
+    "hourName":"8pm",
+    "tasks":[]
+}, 
+{"id":21,
+    "hourName":"9pm",
+    "tasks":[]
+}, 
+{"id":22,
+    "hourName":"10pm",
+    "tasks":[]
+}, 
+{"id":23,
+    "hourName":"11pm",
+    "tasks":[]
+}
+]
