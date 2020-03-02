@@ -1,31 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Wrapper from "./components/Wrapper/wrapper";
-import Day from "./components/Day/day";
-import Header from "./components/Header/header";
-import HourArray from "./HourArray.json";
-
-class App extends Component {
-
-    // constructor for storing local class variables:
-    constructor(props) {
-        super(props);
-        this.state = {
-            username: "Will",
-            hourArray: HourArray
-        };
-    }
-
-    render() {
-        return (
+ 
+function App() {
+    return (
+        <Router>
             <Wrapper>
-
-                <Header username={this.state.username} />
-
-                <Day hourArray={this.state.hourArray} />
-
+                <div>
+                    <Switch>
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/home" component={Home} />
+                        <Route component={Login} />
+                    </Switch>
+                </div>
             </Wrapper>
-        );
-    }
+        </Router>
+    );
 }
 
 export default App;

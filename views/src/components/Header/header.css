@@ -9,3 +9,8 @@
     float: left;
     margin: 0;
 }
+
+.headerBtn {
+    float: right;
+    width: 100px;
+}

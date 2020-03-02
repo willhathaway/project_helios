@@ -5,6 +5,14 @@
     border-right: 3px dotted whitesmoke;
     left: 50%;
     margin: auto;
-
+    overflow-y: auto;
 }
 
+
+.date {
+    width: 50%;
+    left: 50%;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
