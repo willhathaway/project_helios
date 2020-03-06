@@ -15,12 +15,6 @@
           type: String,
           required: true
       },
-      taskChecklist: {
-          type: [String]
-      },
-      taskNotes: {
-          type: [String]
-      },
       taskExtended: {
           type: Number,
           required: true

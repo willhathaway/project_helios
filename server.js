@@ -6,10 +6,6 @@ const routes = require("./routes");
 
 const PORT = process.env.PORT || 3001;
 
-const passport = require('passport')
-  , LocalStrategy = require('passport-local').Strategy;
-
-  
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -29,26 +25,6 @@ mongoose.connect(
     useNewUrlParser: true
   }
 );
-
-// Passport user validation:
-
-app.use(passport.initialize());
-app.use(passport.session());
-
-passport.use(new LocalStrategy(
-  function(username, password, done) {
-    User.findOne({ username: username }, function (err, user) {
-      if (err) { return done(err); }
-      if (!user) {
-        return done(null, false, { message: 'Incorrect username.' });
-      }
-      if (!user.validPassword(password)) {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
-      return done(null, user);
-    });
-  }
-));
 
 
 

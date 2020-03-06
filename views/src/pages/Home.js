@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Day from "../components/Day/day";
-import Header from "../components/Header/header";
 import HourArray from "../HourArray.json";
 import API from "../logic/API";
 import Hour from "../components/Hour/hour";
@@ -43,18 +42,16 @@ class Home extends Component {
     addTask = (event, id) => {
         event.preventDefault();
         console.log('addTask function hitting');
-        // create an object for the new Task, using the hourID of it's parent hour, the username, the task name, etc.,
-        // and push it to this.state.tasks:
-
-        // const newTask = {
-        //     id: 
-        // }
-
-        this.setState({
-            tasks: [...newTask]
-        })
+        // Get 
         const newTask = this.state.tasks.find(task => task.id === id);
+
+        this.setState(prevState => {
+            tasks: prevState.concat(event.target.value)
+        })
+
+    
         console.log(newTask)
+
         API.saveTask({
             id: newTask.id,
             userName: newTask.userName,
@@ -72,7 +69,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-            <Header username={this.state.username} />
                 <Day>
                     <Agenda>
                         {this.state.hourArray.map(hour => (
