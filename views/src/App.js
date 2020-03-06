@@ -1,31 +1,43 @@
-import React, { Component } from "react";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Home from "./pages/Home";
 import Wrapper from "./components/Wrapper/wrapper";
-import Day from "./components/Day/day";
-import Header from "./components/Header/header";
-import HourArray from "./HourArray.json";
+import 'bulma/css/bulma.css';
+import { useAuth0 } from "./contexts/auth0-context";
+import Header from './components/Header/header';
 
-class App extends Component {
+function App() {
 
-    // constructor for storing local class variables:
-    constructor(props) {
-        super(props);
-        this.state = {
-            username: "Will",
-            hourArray: HourArray
-        };
-    }
+    const { isLoading, user, loginWithRedirect } = useAuth0();
 
-    render() {
-        return (
+    return (
+
+        <Router>
             <Wrapper>
+            <>
+      <Header />
 
-                <Header username={this.state.username} />
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            {!isLoading && !user && (
+              <>
+                <button onClick={loginWithRedirect} className="button is-danger">
+                  login
+              </button>
+              </>
+            )}
+            {!isLoading && user && (
 
-                <Day hourArray={this.state.hourArray} />
+              <Home />
+              
+            )}
+          </div>
+        </div>
+    </>
 
             </Wrapper>
-        );
-    }
+        </Router >
+    );
 }
 
 export default App;

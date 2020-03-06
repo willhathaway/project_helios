@@ -1,98 +1,196 @@
 [
     {"id":0,
     "hourName":"midnight",
-    "tasks":[]
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }
 },
 {"id":1,
     "hourName":"1am",
-    "tasks":[]
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }
 }, 
 {"id":2,
     "hourName":"2am",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":3,
     "hourName":"3am",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":4,
     "hourName":"4am",
-    "tasks":[]
-},
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }},
 {"id":5,
     "hourName":"5am",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":6,
     "hourName":"6am",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":7,
     "hourName":"7am",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":8,
     "hourName":"8am",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":9,
     "hourName":"9am",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":10,
     "hourName":"10am",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":11,
     "hourName":"11am",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":12,
     "hourName":"noon",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":13,
     "hourName":"1pm",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":14,
     "hourName":"2pm",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":15,
     "hourName":"3pm",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":16,
     "hourName":"4pm",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":17,
     "hourName":"5pm",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":18,
     "hourName":"6pm",
-    "tasks":[]
-},
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }},
 {"id":19,
     "hourName":"7pm",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":20,
     "hourName":"8pm",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":21,
     "hourName":"9pm",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":22,
     "hourName":"10pm",
-    "tasks":[]
-}, 
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}, 
 {"id":23,
     "hourName":"11pm",
-    "tasks":[]
-}
+    "task":{
+        "taskName":"",
+        "notes":[],
+        "checklist":[],
+        "extended":0
+    }}
 ]

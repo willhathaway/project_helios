@@ -1,7 +1,7 @@
 import React from "react";
 import "./day.css";
-import Agenda from "./Agenda/agenda";
-import Date from "./Date/date";
+import Moment from "moment";
+
 
 function Day(props) {
 
@@ -9,11 +9,9 @@ function Day(props) {
 
         <div className="day">
 
-            <Date date={props.date} />
+            <div className="date">{Moment().format("dddd" + " ~ " + " MMMM D YYYY").toUpperCase()}</div>
 
-            <div></div>
-
-            <Agenda hourArray={props.hourArray} />
+            <div>{props.children}</div>
 
         </div>
 
