@@ -6,7 +6,7 @@ import 'bulma/css/bulma.css';
 import { useAuth0 } from "./contexts/auth0-context";
 import Header from './components/Header/header';
 
-function App() {
+function App(props) {
 
     const { isLoading, user, loginWithRedirect } = useAuth0();
 
@@ -28,7 +28,7 @@ function App() {
             )}
             {!isLoading && user && (
 
-              <Home />
+              <Home/>
               
             )}
           </div>

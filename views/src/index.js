@@ -5,7 +5,7 @@ import { Auth0Provider } from './contexts/auth0-context';
 
 ReactDOM.render(
     <Auth0Provider>
-        <App />
+        <App/>
     </Auth0Provider>, document.getElementById('root'));
 
 
