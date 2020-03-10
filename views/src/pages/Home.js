@@ -25,7 +25,7 @@ function Home() {
 
     const currentDate = moment().format("YYYY-MM-DD");
 
-    console.log(currentDate)
+    
 
     // You may need to declare addTask before initiating this state
 
@@ -34,14 +34,23 @@ function Home() {
     }, [])
     
     const getTasks = () => {
-        API.getTasks()
+        API.getTasks({userEmail: {userEmail}})
             .then(res => {
                 setTasks(res.data)
             })
             .catch((e) => console.log(e));
     };
 
+    const whichTask = (hourID) => {
+        for (let i = 0; i < tasks.length; i++) {
+        if (tasks[i].time === hourID) {
+            return tasks[i].task;
+        }
+    }
+    }
+
     console.log('user', user)
+    console.log('tasks: ', tasks)
 
     return (
         <div>
@@ -58,13 +67,14 @@ function Home() {
                                     taskExtended={0}
                                     taskDate={currentDate}
                                   />
+                                  <p>{tasks.find(whichTask(hour.time))}</p>
                             </Hour>
+                    
                         </div>
                     ))
                     }
                 </Agenda>
             </Day>
-
             {/* onChange={e => setText(e.target.value)} */}
         </div>
     );

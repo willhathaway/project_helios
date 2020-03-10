@@ -7,13 +7,12 @@ class Task extends Component {
 
     constructor(props) {
         super(props);
-        console.log('props', props)
         this.state = {
             time: props.time,
             userEmail: props.userEmail,
             taskInput: "",
             taskExtended: 0,
-            taskDate: props.currentDate,
+            taskDate: props.taskDate,
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -40,11 +39,6 @@ class Task extends Component {
         event.preventDefault();
         console.log('addTask function hitting');
 
-        console.log("time: ", this.state.time);
-        console.log("user email: ", this.state.userEmail);
-        console.log("task: ", this.state.task);
-        console.log("date: ", this.state.currentDate);
-
         let newTask = {
             newTask: {
                 time: this.state.time,
@@ -55,11 +49,9 @@ class Task extends Component {
             }
         }
 
-        console.log("event.target.value: ", event.target.value)
-
         console.log("newTask: ", newTask)
 
-        API.addTask(this.newTask).then(() => this.getTasks());
+        API.addTask(newTask).then((res) => console.log("task added: ", res.data)); // this.getTasks()
 
     };
 
@@ -77,6 +69,7 @@ class Task extends Component {
                     value={this.state.taskInput}
                 />
                 <button type="submit">Submit</button>
+                
             </div>
 
         )

@@ -2,10 +2,11 @@ const taskSchema = require("../models/task");
 
 // Defining methods for the taskController
 module.exports = {
-  findAll: function(req, res) {
-    taskSchema.find(req.query)
+  find: function(req, res) {
+      console.log("findAll() req.params: ", req.params);
+    taskSchema.find(req.params)
       .then(dbTask => res.json(dbTask))
-      .catch(err => res.status(422).json(err));
+      .catch(err => res.json(err));
   },
   findById: function(req, res) {
     taskSchema.findById(req.params.id)
@@ -13,9 +14,11 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    taskSchema.create(req.body)
+      console.log("createTask function hitting in taskController");
+      console.log("req.body: ", req.body)
+    taskSchema.create(req.body.newTask)
       .then(dbTask => res.json(dbTask))
-      .catch(err => res.status(422).json(err));
+      .catch(err => res.json(err));
   },
   update: function(req, res) {
     taskSchema.findOneAndUpdate({ id: req.params.id }, req.body)
