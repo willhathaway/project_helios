@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
+
 .day {
-    width: 50vw;
-    height: 75%;
-    border-left: 3px dotted whitesmoke;
-    border-right: 3px dotted whitesmoke;
+    width: 60vw;
+    border-top:10px;
+    /* border-left: 2px dotted slategrey;
+    border-right: 2px dotted slategrey; */
     left: 50%;
     margin: auto;
     /* overflow-y: auto; */
@@ -15,4 +18,8 @@
     margin: auto;
     color: white;
     text-align: center;
+    margin-bottom:30px;
+    font-family: 'Sen', sans-serif;
+    font-size: x-large;
+
 }

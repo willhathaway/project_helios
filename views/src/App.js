@@ -10,30 +10,36 @@ function App() {
 
     const { isLoading, user, loginWithRedirect } = useAuth0();
 
+    const appStyle = {
+        margin: '0',
+        height: '90%',
+        overflow: 'hidden'
+    }
+
     return (
 
         <Router>
             <Wrapper>
-            <>
-      <Header />
+                <>
+                    <Header />
 
-        <div className="hero-body">
-          <div className="container has-text-centered">
-            {!isLoading && !user && (
-              <>
-                <button onClick={loginWithRedirect} className="button is-danger">
-                  login
+                    <div className="hero-body" style={appStyle}>
+                        <div className="container has-text-centered">
+                            {!isLoading && !user && (
+                                <>
+                                    <button onClick={loginWithRedirect} className="button is-danger">
+                                        login
               </button>
-              </>
-            )}
-            {!isLoading && user && (
+                                </>
+                            )}
+                            {!isLoading && user && (
 
-              <Home />
-              
-            )}
-          </div>
-        </div>
-    </>
+                                <Home />
+
+                            )}
+                        </div>
+                    </div>
+                </>
 
             </Wrapper>
         </Router >

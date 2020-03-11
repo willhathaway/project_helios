@@ -1,5 +1,5 @@
 [
-    {"id":0,
+    {"time":0,
     "hourName":"midnight",
     "task":{
         "taskName":"",
@@ -8,8 +8,8 @@
         "extended":0
     }
 },
-{"id":1,
-    "hourName":"1am",
+{"time":1,
+    "hourName":"1:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -17,176 +17,176 @@
         "extended":0
     }
 }, 
-{"id":2,
-    "hourName":"2am",
+{"time":2,
+    "hourName":"2:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":3,
-    "hourName":"3am",
+{"time":3,
+    "hourName":"3:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":4,
-    "hourName":"4am",
+{"time":4,
+    "hourName":"4:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }},
-{"id":5,
-    "hourName":"5am",
+{"time":5,
+    "hourName":"5:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":6,
-    "hourName":"6am",
+{"time":6,
+    "hourName":"6:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":7,
-    "hourName":"7am",
+{"time":7,
+    "hourName":"7:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":8,
-    "hourName":"8am",
+{"time":8,
+    "hourName":"8:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":9,
-    "hourName":"9am",
+{"time":9,
+    "hourName":"9:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":10,
-    "hourName":"10am",
+{"time":10,
+    "hourName":"10:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":11,
-    "hourName":"11am",
+{"time":11,
+    "hourName":"11:00 am",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":12,
-    "hourName":"noon",
+{"time":12,
+    "hourName":"noontide",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":13,
-    "hourName":"1pm",
+{"time":13,
+    "hourName":"1:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":14,
-    "hourName":"2pm",
+{"time":14,
+    "hourName":"2:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":15,
-    "hourName":"3pm",
+{"time":15,
+    "hourName":"3:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":16,
-    "hourName":"4pm",
+{"time":16,
+    "hourName":"4:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":17,
-    "hourName":"5pm",
+{"time":17,
+    "hourName":"5:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":18,
-    "hourName":"6pm",
+{"time":18,
+    "hourName":"6:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }},
-{"id":19,
-    "hourName":"7pm",
+{"time":19,
+    "hourName":"7:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":20,
-    "hourName":"8pm",
+{"time":20,
+    "hourName":"8:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":21,
-    "hourName":"9pm",
+{"time":21,
+    "hourName":"9:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":22,
-    "hourName":"10pm",
+{"time":22,
+    "hourName":"10:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
         "checklist":[],
         "extended":0
     }}, 
-{"id":23,
-    "hourName":"11pm",
+{"time":23,
+    "hourName":"11:00 pm",
     "task":{
         "taskName":"",
         "notes":[],

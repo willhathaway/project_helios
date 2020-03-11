@@ -3,15 +3,15 @@
 
   const taskSchema = new Schema({
 
-      id: {
+      time: {
           type: Number,
           required: true
       },
-      userName: {
+      userEmail: {
           type: String,
           required: true
       },
-      taskName: {
+      task: {
           type: String,
           required: true
       },
@@ -20,7 +20,7 @@
           required: true
       },
       taskDate: {
-          type: Date,
+          type: String,
           required: true
       }
   });
