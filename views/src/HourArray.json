@@ -9,7 +9,7 @@
     }
 },
 {"time":1,
-    "hourName":"1am",
+    "hourName":"1:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -18,7 +18,7 @@
     }
 }, 
 {"time":2,
-    "hourName":"2am",
+    "hourName":"2:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -26,7 +26,7 @@
         "extended":0
     }}, 
 {"time":3,
-    "hourName":"3am",
+    "hourName":"3:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -34,7 +34,7 @@
         "extended":0
     }}, 
 {"time":4,
-    "hourName":"4am",
+    "hourName":"4:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -42,7 +42,7 @@
         "extended":0
     }},
 {"time":5,
-    "hourName":"5am",
+    "hourName":"5:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -50,7 +50,7 @@
         "extended":0
     }}, 
 {"time":6,
-    "hourName":"6am",
+    "hourName":"6:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -58,7 +58,7 @@
         "extended":0
     }}, 
 {"time":7,
-    "hourName":"7am",
+    "hourName":"7:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -66,7 +66,7 @@
         "extended":0
     }}, 
 {"time":8,
-    "hourName":"8am",
+    "hourName":"8:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -74,7 +74,7 @@
         "extended":0
     }}, 
 {"time":9,
-    "hourName":"9am",
+    "hourName":"9:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -82,7 +82,7 @@
         "extended":0
     }}, 
 {"time":10,
-    "hourName":"10am",
+    "hourName":"10:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -90,7 +90,7 @@
         "extended":0
     }}, 
 {"time":11,
-    "hourName":"11am",
+    "hourName":"11:00 am",
     "task":{
         "taskName":"",
         "notes":[],
@@ -98,7 +98,7 @@
         "extended":0
     }}, 
 {"time":12,
-    "hourName":"noon",
+    "hourName":"noontide",
     "task":{
         "taskName":"",
         "notes":[],
@@ -106,7 +106,7 @@
         "extended":0
     }}, 
 {"time":13,
-    "hourName":"1pm",
+    "hourName":"1:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -114,7 +114,7 @@
         "extended":0
     }}, 
 {"time":14,
-    "hourName":"2pm",
+    "hourName":"2:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -122,7 +122,7 @@
         "extended":0
     }}, 
 {"time":15,
-    "hourName":"3pm",
+    "hourName":"3:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -130,7 +130,7 @@
         "extended":0
     }}, 
 {"time":16,
-    "hourName":"4pm",
+    "hourName":"4:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -138,7 +138,7 @@
         "extended":0
     }}, 
 {"time":17,
-    "hourName":"5pm",
+    "hourName":"5:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -146,7 +146,7 @@
         "extended":0
     }}, 
 {"time":18,
-    "hourName":"6pm",
+    "hourName":"6:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -154,7 +154,7 @@
         "extended":0
     }},
 {"time":19,
-    "hourName":"7pm",
+    "hourName":"7:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -162,7 +162,7 @@
         "extended":0
     }}, 
 {"time":20,
-    "hourName":"8pm",
+    "hourName":"8:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -170,7 +170,7 @@
         "extended":0
     }}, 
 {"time":21,
-    "hourName":"9pm",
+    "hourName":"9:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -178,7 +178,7 @@
         "extended":0
     }}, 
 {"time":22,
-    "hourName":"10pm",
+    "hourName":"10:00 pm",
     "task":{
         "taskName":"",
         "notes":[],
@@ -186,7 +186,7 @@
         "extended":0
     }}, 
 {"time":23,
-    "hourName":"11pm",
+    "hourName":"11:00 pm",
     "task":{
         "taskName":"",
         "notes":[],

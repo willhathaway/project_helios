@@ -17,7 +17,10 @@ function Home() {
 
     const hourArray = HourArray;
 
-    const [tasks, setTasks] = useState([])
+    const [tasks, setTasks] = useState({
+        user_two: user,
+        tasks: []
+    })
 
     // const testTasks = [{time: 0, userEmail: "bob@bob.com", task: "task1", taskExtended: 0, taskDate: "01-01-2020"}, {time: 1, userEmail: "bob@bob.com", task: "task2", taskExtended: 0, taskDate: "01-01-2020"}]
 
@@ -32,25 +35,48 @@ function Home() {
     useEffect(() => {
         getTasks();
     }, [])
-    
+
     const getTasks = () => {
-        API.getTasks({userEmail: {userEmail}})
+        API.getTasks({ userEmail: { userEmail } })
             .then(res => {
-                setTasks(res.data)
+                setTasks({tasks: res.data});
             })
             .catch((e) => console.log(e));
     };
 
+    console.log('user', user)
+
     const whichTask = (hourID) => {
-        for (let i = 0; i < tasks.length; i++) {
-        if (tasks[i].time === hourID) {
-            return tasks[i].task;
+
+        let taskArray = tasks.tasks;
+
+        console.log('taskArray: ', taskArray)
+
+        for (let i = 0; i < taskArray.length; i++) {
+
+            if (taskArray[i].time === hourID) {
+
+                let task = taskArray[i].task;
+
+                return task;
+
+            } else {
+
+                console.log('NO MATCH')
+                return "";
+            }
         }
-    }
+        
     }
 
-    console.log('user', user)
-    console.log('tasks: ', tasks)
+    const taskStyle = {
+        color: "white",
+        width: "100%",
+        textAlign: "center",
+        alignSelf: "stretch",
+        marginTop: "-30px"
+    }
+
 
     return (
         <div>
@@ -61,18 +87,18 @@ function Home() {
                             <Hour key={i} id={hour.time} hourName={hour.hourName}>
                                 <Task
                                     key={i}
+                                    taskInput={tasks.tasks.length}
                                     time={hour.time}
                                     userEmail={userEmail}
-                                    taskName={""}
                                     taskExtended={0}
                                     taskDate={currentDate}
-                                  />
-                                  <p>{tasks.find(whichTask(hour.time))}</p>
+                                />
+                                <p style={taskStyle}>{() => whichTask(hour.time)}</p>
                             </Hour>
-                    
                         </div>
                     ))
                     }
+                  
                 </Agenda>
             </Day>
             {/* onChange={e => setText(e.target.value)} */}

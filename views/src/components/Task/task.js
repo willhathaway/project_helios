@@ -10,14 +10,23 @@ class Task extends Component {
         this.state = {
             time: props.time,
             userEmail: props.userEmail,
-            taskInput: "",
+            taskInput: props.taskInput,
             taskExtended: 0,
             taskDate: props.taskDate,
+            tasks:props.tasks,
         }
+        
 
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
+
+    // componentDidMount = function() {
+    //     let thisHour = this.state.time
+    //     console.log('thisHour: ' , thisHour)
+    //     this.whichTask(thisHour);
+    //     //console.log("componentDidMount ", this.state.taskInput);
+    // }
 
     handleInputChange = event => {
         console.log('hitting', event)
@@ -33,7 +42,6 @@ class Task extends Component {
             this.addTask(event);
         }
     }
-
 
     addTask = function (event) {
         event.preventDefault();
@@ -51,6 +59,8 @@ class Task extends Component {
 
         console.log("newTask: ", newTask)
 
+        console.log("taskName: ", this.state.taskName)
+
         API.addTask(newTask).then((res) => console.log("task added: ", res.data)); // this.getTasks()
 
     };
@@ -62,12 +72,14 @@ class Task extends Component {
                 <input
                     type="text"
                     name="taskInput"
-                    taskName={this.state.taskName}
                     className="taskInput"
                     onChange={this.handleInputChange}
                     onKeyUp={this.handleSubmit}
                     value={this.state.taskInput}
+                    placeholder={this.state.taskInput}
+                    autoComplete="off"
                 />
+                {/* <p>{this.state.taskName}</p> */}
                 <button type="submit">Submit</button>
                 
             </div>
