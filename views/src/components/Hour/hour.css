@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
 
 
 .hour {
@@ -10,7 +11,7 @@
 }
 
 .hourText {
-    color: white;
+    color: whitesmoke;
+    font-family: 'Cormorant Garamond', serif;
     width: 100%;
-    font-family: 'Sen', sans-serif;
 }

@@ -16,6 +16,7 @@ module.exports = {
   create: function(req, res) {
       console.log("createTask function hitting in taskController");
       console.log("req.body: ", req.body)
+      // if a task already exists in this time slot, delete it and replace it
     taskSchema.create(req.body.newTask)
       .then(dbTask => res.json(dbTask))
       .catch(err => res.json(err));

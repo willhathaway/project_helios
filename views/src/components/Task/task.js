@@ -20,14 +20,6 @@ class Task extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-
-    // componentDidMount = function() {
-    //     let thisHour = this.state.time
-    //     console.log('thisHour: ' , thisHour)
-    //     this.whichTask(thisHour);
-    //     //console.log("componentDidMount ", this.state.taskInput);
-    // }
-
     handleInputChange = event => {
         console.log('hitting', event)
         const { name, value } = event.target;
@@ -80,8 +72,8 @@ class Task extends Component {
                     autoComplete="off"
                 />
                 {/* <p>{this.state.taskName}</p> */}
-                <button type="submit">Submit</button>
-                
+                <button class="submitBtn" type="submit">Submit</button>
+                <button class="extendBtn"><img class="extendIcon" src="https://www.thrivingparish.org/wp-content/uploads/2018/01/white-down-arrow-png-2-300x300.png" /></button>
             </div>
 
         )
