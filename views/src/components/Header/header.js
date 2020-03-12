@@ -7,12 +7,12 @@ export default function Header() {
   const { isLoading, user, logout } = useAuth0();
 
   return (
-      <nav className="navbar has-background-dark">
+      <nav className="navbar">
         <div className="container">
-          <div className="navbar-menu is-active has-background-dark">
+          <div className="navbar-menu is-active navbar">
             {/* logo */}
             <div className="navbar-brand">
-              <button className="navbar-item has-text-light is-primary">Helios Day Planner</button>
+              <button className="navbar-item helios"><p className="asterisk">*</p>Helios Day Planner</button>
             </div>
 
             {/* menu items */}
@@ -25,7 +25,7 @@ export default function Header() {
               {/* if there is a user. show user name and logout button */}
               {!isLoading && user && (
                 <>
-                  <button className="navbar-item has-text-light">{user.name}</button>
+                  <button className="navbar-item username">{user.name}</button>
                   <button
                     onClick={() => logout({ returnTo: window.location.origin })}
                     className="navbar-item has-text-light"

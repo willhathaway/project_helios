@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+
 .header {
-    height: 100px;
+    height: 50px;
     width: 100%;
     background-color: black;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .username {
-    color: white;
+    color: whitesmoke;
     float: left;
     margin: 0;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .headerBtn {
@@ -16,9 +20,28 @@
 }
 
 button {
+    font-family: 'Cormorant Garamond', serif;
     background: transparent;
     outline: none;
     border: none;
     font-size: 18px;
     cursor: pointer;
+}
+
+.helios {
+    color: whitesmoke;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.asterisk {
+    color: red;
+    height: 18px;
+    width: 18px;
+    font-size: xx-large;
+    margin-bottom: 18px;
+    margin-right: 5px;
+}
+
+.navbar {
+    background-color: black;
 }
