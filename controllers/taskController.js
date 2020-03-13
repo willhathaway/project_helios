@@ -2,34 +2,40 @@ const taskSchema = require("../models/task");
 
 // Defining methods for the taskController
 module.exports = {
-  find: function(req, res) {
+  findAll: function(req, res) {
       console.log("findAll() req.params: ", req.params);
-    taskSchema.find(req.params)
+      taskSchema.find({userEmail: req.params.email})
       .then(dbTask => res.json(dbTask))
       .catch(err => res.json(err));
   },
   findById: function(req, res) {
-    taskSchema.findById(req.params.id)
-      .then(dbTask => res.json(dbTask))
-      .catch(err => res.status(422).json(err));
-  },
+    console.log("findAll() req.params: ", req.params);
+    taskSchema.find({userEmail: req.params.email})
+    .then(dbTask => res.json(dbTask))
+    .catch(err => res.json(err));
+},
   create: function(req, res) {
       console.log("createTask function hitting in taskController");
       console.log("req.body: ", req.body)
-      // if a task already exists in this time slot, delete it and replace it
-    taskSchema.create(req.body.newTask)
+      // if a task already exists in this time slot, delete it and replace it:
+
+      // find one and update in database. search for the task by time.
+
+      let newTask = req.body.newTask;
+
+      taskSchema.findOneAndReplace({time: req.body.newTask.time}, newTask, {
+          new: true,
+          upsert: true
+      })
       .then(dbTask => res.json(dbTask))
       .catch(err => res.json(err));
-  },
-  update: function(req, res) {
-    taskSchema.findOneAndUpdate({ id: req.params.id }, req.body)
-      .then(dbTask => res.json(dbTask))
-      .catch(err => res.status(422).json(err));
+
   },
   remove: function(req, res) {
-    taskSchema.findById(req.params.id)
+      console.log("delete task. req.params: " , req.params)
+    taskSchema.findOne({time: req.params.time, userEmail: req.params.email})
       .then(dbTask => dbTask.remove())
       .then(dbTask => res.json(dbTask))
-      .catch(err => res.status(422).json(err));
+      .catch(err => res.json(err));
   }
 };

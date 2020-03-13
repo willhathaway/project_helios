@@ -13,15 +13,14 @@ class Task extends Component {
             taskInput: props.taskInput,
             taskExtended: 0,
             taskDate: props.taskDate,
-            tasks:props.tasks,
-        }
+            tasks:props.tasks
+                }
         
 
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     handleInputChange = event => {
-        console.log('hitting', event)
         const { name, value } = event.target;
         this.setState({
             [name]: value
@@ -30,14 +29,13 @@ class Task extends Component {
 
     handleSubmit = event => {
         if (event.key === 'Enter') {
-            console.log("enter")
             this.addTask(event);
         }
     }
 
     addTask = function (event) {
+
         event.preventDefault();
-        console.log('addTask function hitting');
 
         let newTask = {
             newTask: {
@@ -49,11 +47,17 @@ class Task extends Component {
             }
         }
 
-        console.log("newTask: ", newTask)
 
-        console.log("taskName: ", this.state.taskName)
+        if (newTask.newTask.task === "") {
+            console.log("deleting task");
+            API.deleteTask(newTask.newTask.time);
+        } else {
+            console.log("newTask: ", newTask)
+            API.addTask(newTask).then((res) => {
+                console.log("task added: ", res.data)
 
-        API.addTask(newTask).then((res) => console.log("task added: ", res.data)); // this.getTasks()
+            });
+        }
 
     };
 
@@ -71,9 +75,8 @@ class Task extends Component {
                     placeholder={this.state.taskInput}
                     autoComplete="off"
                 />
-                {/* <p>{this.state.taskName}</p> */}
-                <button class="submitBtn" type="submit">Submit</button>
-                <button class="extendBtn"><img class="extendIcon" src="https://www.thrivingparish.org/wp-content/uploads/2018/01/white-down-arrow-png-2-300x300.png" /></button>
+                <button className="submitBtn" type="submit">Submit</button>
+                <button className="extendBtn"><img className="extendIcon" src="https://www.thrivingparish.org/wp-content/uploads/2018/01/white-down-arrow-png-2-300x300.png" /></button>
             </div>
 
         )
