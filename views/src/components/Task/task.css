@@ -13,6 +13,7 @@
 .taskInput {
     color:white;
     font-family: 'Cormorant Garamond', serif;
+    font-size: medium;
     background-color: black;
     border: 1px solid rgb(53, 61, 68);
     width: 60%;

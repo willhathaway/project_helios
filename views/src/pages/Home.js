@@ -11,121 +11,80 @@ import moment from "moment";
 function Home() {
     // access the context info with useAuth0()
 
-    console.log('use auth 0', useAuth0())
-
-    const user = useState(useAuth0().user);
+    const user = useAuth0().user;
 
     const hourArray = HourArray;
 
     const [tasks, setTasks] = useState({
-        user_two: user,
-        tasks: []
+        userObj: user,
+        tasks: [],
+        loaded: false
     })
 
-    // const testTasks = [{time: 0, userEmail: "bob@bob.com", task: "task1", taskExtended: 0, taskDate: "01-01-2020"}, {time: 1, userEmail: "bob@bob.com", task: "task2", taskExtended: 0, taskDate: "01-01-2020"}]
-
-    const userEmail = user[0].email;
+    const userEmail = tasks.userObj.email;
 
     const currentDate = moment().format("YYYY-MM-DD");
-
-    
-
-    // You may need to declare addTask before initiating this state
 
     useEffect(() => {
         getTasks();
     }, [])
 
     const getTasks = () => {
-        API.getTasks({ userEmail: { userEmail } })
+        API.getTasks(userEmail)
             .then(res => {
-                setTasks({tasks: res.data});
+                setTasks({ ...tasks, tasks: res.data , loaded:true})
+
             })
             .catch((e) => console.log(e));
     };
 
-    console.log('user', user)
+    console.log(tasks.tasks)
 
     const whichTask = (hourID) => {
 
-        let taskArray = tasks.tasks;
+        return tasks.tasks.find((t) => t.time === hourID) ? tasks.tasks.find((t) => t.time === hourID).task : '';
 
-        console.log('taskArray: ', taskArray)
-
-        for (let i = 0; i < taskArray.length; i++) {
-
-            if (taskArray[i].time === hourID) {
-
-                let task = taskArray[i].task;
-
-                return task;
-
-            } else {
-
-                console.log('NO MATCH')
-                return "";
-            }
-        }
-        
     }
 
-    const taskStyle = {
-        color: "white",
-        width: "100%",
-        textAlign: "center",
-        alignSelf: "stretch",
-        marginTop: "-30px"
-    }
+    const deleteTasks = function () {
 
+        // API.deleteTask
+        console.log("deleting all")
+
+    }
 
     return (
         <div>
             <Day>
                 <Agenda>
-                    {hourArray.map((hour, i) => (
-                        <div key={i}>
-                            <Hour key={i} id={hour.time} hourName={hour.hourName}>
-                                <Task
-                                    key={i}
-                                    taskInput={tasks.tasks.length}
-                                    time={hour.time}
-                                    userEmail={userEmail}
-                                    taskExtended={0}
-                                    taskDate={currentDate}
-                                />
-                                <p style={taskStyle}>{() => whichTask(hour.time)}</p>
-                            </Hour>
-                        </div>
-                    ))
-                    }
-                  
+                    {tasks.loaded === true ? (
+                        hourArray.map((hour, i) => {
+                            return (
+                                <div key={i}>
+                                    <Hour key={i} id={hour.time} hourName={hour.hourName}>
+                                        <Task
+                                            key={i}
+                                            taskInput={whichTask(hour.time)}
+                                            time={hour.time}
+                                            userEmail={userEmail}
+                                            taskExtended={0}
+                                            taskDate={currentDate}
+                                        />
+                                    </Hour>
+                                </div>
+                            )
+                        })
+
+                    ) : (
+                            <p>tasks are loading</p>
+                        )}
+
                 </Agenda>
+                <button onClick={deleteTasks}></button>
             </Day>
-            {/* onChange={e => setText(e.target.value)} */}
         </div>
     );
 }
-
-
-
-//     // constructor for storing local class variables:
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             username: "",
-//             hourArray: HourArray,
-//             enter: this.addTask,
-//             tasks: [],
-//         };
-//         console.log("useAuth0: " , useAuth0);
-//         //this.taskID = React.createRef();
-//     }
-
-
-
-//     // get Tasks from mongoose database, if there are any to get.
-//     // for each task, render it to the corresponding hour.
-
 
 
 export default Home;
