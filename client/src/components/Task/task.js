@@ -13,9 +13,9 @@ class Task extends Component {
             taskInput: props.taskInput,
             taskExtended: 0,
             taskDate: props.taskDate,
-            tasks:props.tasks
-                }
-        
+            tasks: props.tasks
+        }
+
 
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -49,8 +49,19 @@ class Task extends Component {
 
 
         if (newTask.newTask.task === "") {
-            console.log("deleting task");
-            API.deleteTask(newTask.newTask.time);
+
+            
+            let    deleteObj=  {
+                    time: newTask.newTask.time,
+                    email: newTask.newTask.userEmail
+                }
+            
+
+            console.log("deleting task: ", deleteObj);
+
+            API.deleteTask(deleteObj).then((res) => {
+                console.log("task deleted: ", res.data)
+            });
         } else {
             console.log("newTask: ", newTask)
             API.addTask(newTask).then((res) => {
