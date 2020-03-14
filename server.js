@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("views"));
+  app.use(express.static("client/build"));
 }
 
 // Add routes, both API and view
