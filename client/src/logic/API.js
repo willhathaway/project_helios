@@ -6,8 +6,9 @@ export default {
         return axios.get("/api/tasks/"+ userEmail);
     },
     // Deletes the saved task with the given id
-    deleteTask: function (time, userEmail) {
-        return axios.delete("/api/tasks/" + time + "/" + userEmail);
+    deleteTask: function (deleteObj) {
+        console.log("delete Obj: " , deleteObj);
+        return axios.delete("/api/tasks", deleteObj);
     },
     // Add a task to the DB:
     addTask: function (taskData) {
