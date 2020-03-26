@@ -13,4 +13,6 @@ To use the app, sign in using email. The authentication is provided by Auth0, wh
 As of this version, the extend task feature doesn't work. It will be added soon, probably using the React Drag-and-drop node package. Another feature that will be added soon is a calendar, where users can click to past or future days to make changes or review. 
 I also want to add other input options, such as checklists or notes, to existing tasks.
 
+Questions? Feel free to reach out at <a mailto="william.hathaway38@gmail.com">william.hathaway38@gmail.com</a>
+
 ### thanks
