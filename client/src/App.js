@@ -1,3 +1,4 @@
+// dependencies:
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/Home";
@@ -6,10 +7,13 @@ import 'bulma/css/bulma.css';
 import { useAuth0 } from "./contexts/auth0-context";
 import Header from './components/Header/header';
 
+// function containing the page, to be rendered on login:
 function App() {
 
+    // dependencies from auth0 authentication:
     const { isLoading, user, loginWithRedirect } = useAuth0();
 
+    // styles for header:
     const appStyle = {
         margin: '0',
         height: '90%',
