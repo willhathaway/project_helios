@@ -21,6 +21,7 @@ module.exports = {
     create: function (req, res) {
         console.log("createTask function hitting in taskController");
         console.log("req.body: ", req.body)
+        
         // if a task already exists in this time slot, delete it and replace it:
 
         // find one and update in database. search for the task by time.
