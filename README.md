@@ -1,5 +1,7 @@
 # project_helios
 
+![helios-day-image](https://github.com/willhathaway/project_helios/blob/master/Screen%20Shot%202020-05-04%20at%209.44.25%20AM.png)
+
 ## description:
 
 Helios Day Planner is a React daily planner. It was created with the intention of addressing some of the clunky aspects of Google Calendar or Apple Calendar. Helios aims to replicate the simplicity of a paper agenda. Adding tasks and events should be as simple as typing them in and hitting 'enter'. Extending the length of an agenda item shouldn't involve inputting start/end times in two seperate fields. Extending tasks should involve clicking and dragging the task to physically extend it's presence on the page.
